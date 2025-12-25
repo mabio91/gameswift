@@ -1,15 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>GameSwift</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body style="font-family: -apple-system, BlinkMacSystemFont, sans-serif; padding:40px;">
-  <h1>GameSwift</h1>
-  <p>We build simple, modern mobile applications.</p>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <h2>Contact</h2>
-  <p>Email: fuocoapp@gmail.com</p>
+  <style>
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                   Roboto, Helvetica, Arial, sans-serif;
+      background: radial-gradient(circle at top, #1e1e2f, #0f0f1a);
+      color: #ffffff;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 80px 24px;
+    }
+
+    header {
+      margin-bottom: 80px;
+    }
+
+    h1 {
+      font-size: 56px;
+      letter-spacing: -1px;
+      margin-bottom: 16px;
+    }
+
+    p.subtitle {
+      font-size: 20px;
+      color: #b5b5c8;
+      max-width: 520px;
+      line-height: 1.6;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.06);
+      border-radius: 20px;
+      padding: 32px;
+      backdrop-filter: blur(12px);
+      margin-bottom: 32px;
+    }
+
+    h2 {
+      font-size: 24px;
+      margin-bottom: 12px;
+    }
+
+    p {
+      color: #d0d0e5;
+      line-height: 1.6;
+    }
+
+    footer {
+      margin-top: 80px;
+      font-size: 14px;
+      color: #9a9ab3;
+    }
+
+    a {
+      color: #8aa2ff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1>GameSwift</h1>
+      <p class="subtitle">
+        We design modern, lightweight mobile applications
+        focused on simplicity, engagement and great user experience.
+      </p>
+    </header>
+
+    <section class="card">
+      <h2>What we do</h2>
+      <p>
+        GameSwift develops digital products ranging from games
+        to lifestyle and utility apps.  
+        Our goal is to build experiences that feel natural,
+        fast and enjoyable.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Contact</h2>
+      <p>
+        Email: <a href="mailto:support@gameswift.app">support@gameswift.app</a><br />
+        EU Operator information available upon request.
+      </p>
+    </section>
+
+    <footer>
+      © GameSwift
+    </footer>
+  </div>
 </body>
 </html>
