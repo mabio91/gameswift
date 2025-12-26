@@ -214,6 +214,22 @@
       .cta{ flex-direction:row; }
       .btn{ width:50%; }
     }
+    /* Subtle noise to avoid gradient banding */
+body::after{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      rgba(255,255,255,0.015),
+      rgba(255,255,255,0.015) 1px,
+      rgba(0,0,0,0.015) 2px
+    );
+  mix-blend-mode: overlay;
+  opacity: 0.35;
+}
   </style>
 </head>
 
