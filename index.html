@@ -9,7 +9,6 @@
   <style>
     :root{
       --bg:#000;
-      --panel:#0c0c0c;
       --border:rgba(255,255,255,.10);
       --text:#fff;
       --muted:rgba(255,255,255,.65);
@@ -23,9 +22,10 @@
     html,body{ height:100%; }
     body{
       margin:0;
+      /* FIX: smoother, no “double” banding */
       background:
-        radial-gradient(70% 45% at 50% 0%, rgba(255,59,48,.22), transparent 70%),
-        radial-gradient(60% 40% at 50% 18%, rgba(255,140,26,.14), transparent 70%),
+        radial-gradient(1200px 800px at 50% -220px, rgba(255,59,48,.28), rgba(255,59,48,0) 72%),
+        radial-gradient(1000px 650px at 50% 120px, rgba(255,140,26,.18), rgba(255,140,26,0) 78%),
         var(--bg);
       color:var(--text);
       font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
@@ -36,40 +36,14 @@
     .wrap{
       max-width:720px;
       margin:0 auto;
-      padding:26px 16px 56px;
+      padding:28px 16px 56px;
       text-align:center;
     }
 
-    /* Top row */
-    .top{
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      gap:10px;
-      margin-top:6px;
-      margin-bottom:18px;
-      flex-wrap:wrap;
-    }
-    .mini-pill{
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      padding:8px 12px;
-      border-radius:999px;
-      border:1px solid var(--border);
-      background:rgba(255,255,255,.05);
-      color:rgba(255,255,255,.78);
-      font-weight:700;
-      font-size:13px;
-      letter-spacing:.2px;
-      backdrop-filter: blur(10px);
-    }
-    .flag{ font-size:18px; opacity:.95; }
-
     /* Hero */
     .hero{
-      margin:14px 0 22px;
-      padding:22px 14px 10px;
+      margin:8px 0 22px;
+      padding:18px 14px 10px;
     }
 
     .logo-dot{
@@ -233,7 +207,6 @@
       font-size:12.5px;
     }
 
-    /* desktop: still centered, just nicer spacing */
     @media (min-width: 760px){
       .wrap{ padding:34px 16px 64px; }
       h1{ font-size:46px; }
@@ -246,11 +219,6 @@
 
 <body>
   <div class="wrap">
-
-    <div class="top">
-      <div class="mini-pill">Mobile App Studio</div>
-      <div class="mini-pill"><span class="flag">🇮🇹</span> Italy</div>
-    </div>
 
     <div class="hero">
       <div class="logo-dot" aria-hidden="true">🔥</div>
